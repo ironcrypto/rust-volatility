@@ -1,4 +1,4 @@
-**RUST pet project**
+**Volatility Estimator in RUST**
 
 Volatility estimator in `Rust` for the ETH/USDC asset pair. 
 

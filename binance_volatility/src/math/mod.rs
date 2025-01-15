@@ -1,5 +1,6 @@
 use std::collections::VecDeque;
 use std::time::{Duration, SystemTime};
+use tracing::warn;
 
 pub struct VolatilityCalculator {
     window: VecDeque<(SystemTime, f64)>, // Stores (timestamp, price)
@@ -39,7 +40,7 @@ impl VolatilityCalculator {
 
     /// Calculate the rolling volatility (standard deviation of prices).
     pub fn calculate_volatility(&self) -> Option<f64> {
-        if self.window.len() < 2 {
+        if self.window.len() < 10 {
             return None; // Not enough data points for calculation
         }
 

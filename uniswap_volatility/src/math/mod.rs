@@ -41,11 +41,12 @@ impl VolatilityCalculator {
 
     /// Calculate the rolling volatility (standard deviation of prices).
     pub fn calculate_volatility(&self) -> Option<f64> {
-        if self.window.len() < 2 {
+        if self.window.len() < 5 {
             return None; // Not enough data points for calculation
         }
         debug!("Rolling window contains: {:?}", self.window);
         let prices: Vec<f64> = self.window.iter().map(|(_, price)| *price).collect();
+        debug!("Prices: {:?}", prices);
         let mean: f64 = prices.iter().sum::<f64>() / prices.len() as f64;
         let variance: f64 = prices.iter().map(|v| (v - mean).powi(2)).sum::<f64>() / prices.len() as f64;
 

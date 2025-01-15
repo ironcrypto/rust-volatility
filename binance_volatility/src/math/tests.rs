@@ -1,7 +1,7 @@
 #[cfg(test)]
 mod tests {
     use crate::math::VolatilityCalculator;
-    use std::time::{Duration};
+    use std::time::Duration;
     use std::thread::sleep;
 
 

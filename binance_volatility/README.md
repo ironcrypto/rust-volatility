@@ -3,29 +3,18 @@
 
 This Rust project implements a Binance WebSocket client to retrieve OHLC data and calculates rolling window volatility based on a given algorithm.
 
-## Structure
-
-src/
-├── client/                # Contains WebSocket client logic
-│   ├── mod.rs             # Module entry point
-│   └── tests.rs           # Unit tests for `client` module
-├── math/                  # Contains mathematical logic
-│   ├── mod.rs             # Module entry point
-│   └── tests.rs           # Unit tests for `math` module
-├── main.rs                # Application entry point
-tests/                     # Integration tests
-├── integration_test.rs    # Integration tests for the entire app
-Cargo.toml
 
 ## Setup and Run
 
-1. Install Rust from [rust-lang.org](https://www.rust-lang.org/).
-2. Clone the repository.
-3. Run the project with:
+1. Clone the repository.
+2. Start Prometheus with the /prometheus.yml file
+2. Run the project with:
 
 ```bash
+cargo build
 cargo run
 ```
+
 
 ## Approach and Rationale
 

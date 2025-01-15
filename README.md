@@ -8,4 +8,10 @@ The goal is to listen to two different data sources:
 
 - The second source is off-chain (e.g. data from a centralized exchange)
 
-Using / combining data from your sources, it continuously estimates volatility over a rolling time window.
+Using data from the sources, it continuously estimates two volatilities over a rolling time window, and exposes them to prometheus endpoint.
+
+*Prometheus Queries*:
+- uniswap_volatility{symbol="ethusdc"}
+- binance_volatility{symbol="ethusdc"}
+
+*Prometheus Endpoint*: see config file /prometheus.yml

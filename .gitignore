@@ -1,0 +1,6 @@
+*log*
+_arxiv/
+binance_volatility/target/
+binance_volatility/Cargo.lock
+uniswap_volatility/target/
+uniswap_volatility/Cargo.lock

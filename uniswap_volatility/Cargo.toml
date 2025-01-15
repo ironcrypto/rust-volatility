@@ -1,0 +1,29 @@
+
+[package]
+name = "uniswap_volatility"
+version = "0.1.0"
+edition = "2018"
+
+[dependencies]
+ethers = "2.0"
+tokio = { version = "1.43", features = ["full"] }
+serde = { version = "1.0", features = ["derive"] }
+web3 = "0.18.0"
+dotenv = "0.15.0"
+futures-util = "0.3"
+primitive-types = "0.10"
+
+# Logging
+log = "0.4"
+env_logger = "0.11.5"
+tracing = "0.1"
+tracing-appender = "0.2"
+tracing-subscriber = { version = "0.3", features = ["env-filter"] }
+
+# Exposition
+prometheus = "0.13.3"
+hyper = { version = "0.14", features = ["server", "full"] }
+
+[dev-dependencies]
+# Testing framework
+tokio = { version = "1", features = ["full"] }

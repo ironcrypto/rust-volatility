@@ -1,21 +1,3 @@
-**Volatility Estimator in RUST**
-
-Volatility estimator in `Rust` for the ETH/USDC asset pair. 
-
-The goal is to listen to two different data sources:
-
-- One source is on-chain (e.g. decentralized exchange data on ethereum mainnet)
-
-- The second source is off-chain (e.g. data from a centralized exchange)
-
-Using data from the sources, it continuously estimates two volatilities over a rolling time window, and exposes them to prometheus endpoint.
-
-*Prometheus Queries*:
-- uniswap_volatility{symbol="ethusdc"}
-- binance_volatility{symbol="ethusdc"}
-
-*Prometheus Endpoint*: see config file /prometheus.yml
-
 # Rust Volatility
 
 ## Overview
@@ -117,18 +99,20 @@ cargo run --bin uniswap_volatility
 
 ### Prometheus Metrics
 
-After starting the application, access the Prometheus metrics endpoint at:
+After starting the application, access the Prometheus metrics endpoints at:
 ```bash
-http://localhost:8080/metrics
+binance: http://localhost:8080/metrics
+uniswap: http://localhost:8081/metrics
 ```
 
 Queries for Grafana
 ```bash
-uniswap_volatility{symbol="ethusdc"}
-```
-```bash
 binance_volatility{symbol="ethusdc"}
 ```
+```bash
+uniswap_volatility{symbol="ethusdc"}
+```
+
 
 ## Future Improvements
 ### 1.	Error Handling Enhancements:

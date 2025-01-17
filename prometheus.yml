@@ -6,6 +6,10 @@ scrape_configs:
     static_configs:
     - targets: ["localhost:9090"]
 
-  - job_name: "arrakis_volatility"
+  - job_name: "binance_volatility"
     static_configs:
       - targets: ["127.0.0.1:8080"] 
+
+  - job_name: "uniswap_volatility"
+    static_configs:
+      - targets: ["127.0.0.1:8081"] 

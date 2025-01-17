@@ -4,6 +4,7 @@ mod tests {
     use std::sync::{Arc, Mutex};
     use crate::client::start_multi_symbol_stream; 
 
+
     #[tokio::test]
     async fn test_binance_websocket_connection() {
         // Test WebSocket connection for a single symbol

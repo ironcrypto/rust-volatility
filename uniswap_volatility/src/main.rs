@@ -154,7 +154,7 @@ async fn process_prices_task(
 }
 
 async fn metrics_server_task(registry: Arc<Registry>) {
-    let addr = ([127, 0, 0, 1], 8080).into();
+    let addr = ([127, 0, 0, 1], 8081).into();
     let make_svc = make_service_fn(move |_conn| {
         let registry = Arc::clone(&registry);
         async move {
@@ -187,7 +187,7 @@ async fn metrics_server_task(registry: Arc<Registry>) {
         }
     });
 
-    info!("Starting Prometheus metrics server at http://127.0.0.1:8080");
+    info!("Starting Prometheus metrics server at http://127.0.0.1:8081");
     let server = Server::bind(&addr).serve(make_svc);
 
     // Await the server and handle errors

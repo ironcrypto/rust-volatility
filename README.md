@@ -112,6 +112,7 @@ binance_volatility{symbol="ethusdc"}
 ```bash
 uniswap_volatility{symbol="ethusdc"}
 ```
+![image](https://github.com/user-attachments/assets/cb17911e-2bde-4d9b-996e-9d801bf6eac7)
 
 
 ## Future Improvements

@@ -116,6 +116,9 @@ uniswap_volatility{symbol="ethusdc"}
 
 
 ## Future Improvements
+### 0.   Mulithreading:
+- Use tokio to multithread vs having two seperate binaries.
+  
 ### 1.	Error Handling Enhancements:
 - Introduce bounded channels to prevent unbounded memory usage.
 - Add retries and circuit breakers for API and WebSocket connections.
